@@ -1,0 +1,57 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './App.{js,jsx,ts,tsx}',
+    './app/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+    './hooks/**/*.{js,jsx,ts,tsx}'
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#2563eb',
+          50: '#eaf2ff',
+          100: '#dbe9ff',
+          200: '#bcd5ff',
+          300: '#9cc0ff',
+          400: '#6fa7ff',
+          500: '#2563eb',
+          600: '#1d4ed8',
+          700: '#173bb0',
+          800: '#122b86',
+          900: '#0b1a4d'
+        },
+        accent: '#22c55e',
+        background: '#f8fafc',
+        card: '#ffffff',
+        dark: '#0f172a',
+        text: '#0f172a',
+        muted: '#64748b',
+        border: '#e2e8f0',
+        slate: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1f2937',
+          900: '#0f172a'
+        }
+      },
+      borderRadius: {
+        xl: '12px',
+        '2xl': '20px',
+        full: '999px',
+      },
+      boxShadow: {
+        card: '0 16px 36px rgba(15, 23, 42, 0.08)',
+        nav: '0 18px 48px rgba(15, 23, 42, 0.16)'
+      }
+    },
+  },
+  plugins: [],
+};

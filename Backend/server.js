@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
@@ -11,14 +12,10 @@ const frontendDir = path.join(__dirname, "..", "Frontend");
 
 app.use(express.json());
 app.use((req, res, next) => {
-  const origin = req.headers.origin;
-
-  if (!origin || origin === "http://localhost:3000") {
-    res.setHeader("Access-Control-Allow-Origin", origin || "*");
-    res.setHeader("Vary", "Origin");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
-  }
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
 
   if (req.method === "OPTIONS") {
     res.sendStatus(204);
